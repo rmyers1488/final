@@ -1,0 +1,269 @@
+﻿body
+{
+}
+.flexBox {
+    display: flex;
+}
+/*scrolling slideshow*/
+
+/*end scrolling slideshow*/
+
+/*.leftImages{
+    list-style:none;
+}
+.rightImage {
+    margin-left: 1em;
+    height: 100px;
+}
+.rightImage img {
+    height: 500px;
+}*/
+.rightBox {
+    margin-left: .5em;
+}
+/*.image{
+    width: 50px;
+}*/
+/*images slideshow*/
+/*#images img {
+    display: none;
+    height: 500px;
+}
+#images .show {
+    display: inline;
+}*/
+/*images scroll*/
+.imgContainer {
+    overflow: hidden;
+    height: 500px;
+    width: 800px;
+    margin-bottom: 15px;
+}
+.imageBlock {
+    overflow: hidden;
+/*    width: 1500px;*/
+    height: 500px;
+    width: 1200px;
+}
+.imageBlock img{
+    float:left;
+}
+/*#images {
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+    position: relative;
+}*/
+/*#images img {
+    float: left;
+    width: auto;
+    height: 500px;
+}*/
+/*slideshow widget*/
+/*.imageBlock {
+    border: 1px solid #bebebe;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    width: 400px;
+    z-index: 10;
+}
+.imageBlock ul {
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 2500px;
+}
+.imageBlock li {
+    float: left;
+}
+.imageBlock .trigger {
+    left: 0;
+    position: absolute;
+    top: 0; 
+    z-index: 5;
+    text-indent: -9999px;
+    height: 400px;
+    width: 400px;
+    display: block;
+}*/
+
+/*images*/
+.moveData {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+}
+.moveList {
+    text-decoration: underline;
+}
+.insideTile {
+    margin-left: .5em;
+    margin-right: .5em;
+    margin-top: .5em;
+    position: fixed;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+/*    border-radius: 20px;*/
+    border: 5px solid black;
+    background-color: white;
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+.box {
+    margin-right: 8px;
+    margin-left: 8px;
+    width: 50%;
+    line-height: 1.5em;
+}
+/*.th {
+    text-align: right;
+}*/
+.statBlock {
+/*    border: 1px black solid;*/
+}
+.statBlock table {
+    border: 1px black solid;
+    width: 150px;
+}
+.statBlock table .th {
+    text-align: right;
+}
+.rightBox table{
+    border: 1px black solid;
+    width: 150px;
+}
+.rightBox table .th {
+    text-align: right;
+}
+.box b {
+/*    color: hsl(189, 57%, 69%);*/
+/*    color: hsl(155, 30%, 37%);*/
+    color: hsl(133, 30%, 62%);
+}
+/*lightbox*/
+/*#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; background: black;
+}*/
+/*lightbox over*/
+/*tooltip*/
+.tooltip {
+    display: none;
+    position: absolute;
+    border: 1px solid black;
+    background-color: #ffed8a;
+    padding: 2px 6px;
+}
+
+/*menus*/
+.menu {
+    display:inline-block;
+    display: flex;
+    background-color: hsl(352, 87%, 40%);
+    color: hsl(183, 41%, 72%);
+    border-radius: 5px;
+    padding-right: 15px;
+    padding-left: 5px;
+    position: relative;
+}
+.menu a {
+    color: hsl(183, 41%, 72%);
+    display: inline-block;
+}
+.menu ul {
+    list-style:none;
+}
+/*hover menu*/
+/*.robertList {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+    .robertList, .robertList ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+        .robertList li {
+            float: left;
+            background: #fff;
+        }
+        .robertList a {
+            display: block;
+            padding: 5px;
+            width: 130px;
+        }
+        .robertList li ul {
+            position: absolute;
+            left: -999em;
+            width: 140px;
+        }
+            .robertList li:hover ul, .robertList li ul:hover {
+                left: auto;
+            }*/
+/*menu over*/
+
+/*natureStat block*/
+.natureStats {
+    height: 175px;
+    width: 350px;
+    overflow: scroll;
+}
+/*natureStat block over*/
+
+/*growl*/
+#growl {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    width: 320px;
+    z-index: 10;
+}
+.notice {
+    position: relative;
+    min-height: 30px;
+}
+.skin {
+    position: absolute;
+    background-color: #000000;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    -moz-border-radius: 5px; --webkit-border-radius: 5px;
+}
+.close {
+    background: url('close-button-icon-free-vector.jpg') 0 0 no-repeat;
+    text-indent: -9999px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 26px;
+    height: 26px;
+}
+.content {
+    color: white;
+    padding-left: 5px;
+}
+
+/*1 up container for damage*/
+.adding {
+    position: relative;
+    left: -35px;
+    top: -4px;
+    display: none;
+}
