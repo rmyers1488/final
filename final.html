@@ -9,41 +9,49 @@
 <body>
     <div class="menu">
         <div>
-            <ul class="robertMenu">
-                <li class="robertChar">Robert: Bart</li>
-                <li>
-                    <a href="#">Character Bio</a>
-                </li>
-                <li>
-                    <a href="#">Character Sheet</a>
-                </li>
-                <!--<li class="bartList list">-->
-                <ul class="robertTeam">
-                    <li class="robertTeamList">Team</li>
+            <div class="robertChar">Robert: Bart</div>
+            
+                <ul class="robertCharList">
                     <li>
-                        <a href="#" class="blurp" title="Bulbasaur">Cash</a>
+                        <a href="#">Character Bio</a>
                     </li>
                     <li>
-                        <a href="#" class="blurp" title="Skiddo">Trevor</a>
+                        <a href="#">Character Sheet</a>
                     </li>
-                    <li>
-                        <a href="#" class="blurp" title="Ralts">Mob</a>
-                    </li>
+                    <!--<li class="bartList list">-->
+                    <div class="robertCharList robertTeamList">Team</div>
+                    <ul>
+                        <li class="robertMon">
+                            <a href="#" class="blurp" title="Bulbasaur">Cash</a>
+                        </li>
+                        <li class="robertMon">
+                            <a href="#" class="blurp" title="Skiddo">Trevor</a>
+                        </li>
+                        <li class="robertMon">
+                            <a href="#" class="blurp" title="Ralts">Mob</a>
+                        </li>
+                    </ul>
                 </ul>
-                </li>
                 <!--</li>-->
-            </ul>
+            
         </div>
         <ul class="Mark: Gallant"></ul>
         <ul class="Drew: Mary"></ul>
         <ul class="Ben: Wilber"></ul>
     </div>
-    
+
     <h2>This game relies on the Pokemon TableTop United version 1.05</h2>
     <a class="campaign" href="#">Campaign</a>
-    <div id="gymBages" title="One Bage">
-        <p>Trainer Bart has earned 1 Gym Badge!</p>
-        <p>He has 7 more to go!</p>
+<!--dialog-->
+    <div id="gymBages">
+        <div class="insideGym" title="bage numbers">
+            <span class="badge">Badges</span>
+            <p>
+                Trainer Bart has earned 1 Gym Badge!
+                <br />
+                He has 7 more to go!
+            </p>
+        </div>
     </div>
     <h1 class="blurp" title="Bulbasaur can be seen napping in bright
         sunlight. There is a seed on its back. By soaking up the sun's
@@ -86,10 +94,10 @@
         <a rel="img" class="lightbox" href="OIP-3189295436.jpg"></a>-->
         <!--</div>-->
     </div>
+    <div id="growl"></div>
 
     <div class="flexBox">
         <div class="box">
-            <div id="growl"></div>
             <h3 class="nameBox">
                 <span class="nameTitle">Name:</span> Cash
             </h3>
@@ -115,10 +123,23 @@
             <b>Skills:</b> Athl 3d6+2, Acro 2d6, Combat 2d6, Stealth 2d6, Percep 2d6, Focus 2d6+1
             <br />
             <div class="natureStats">
+                <div class="statRange">
+                    <form action="">
+                        <fieldset>
+                            <label for="stats">Nature</label>
+                            <select id="stats" name="stats">
+                                <option value="1">Modest</option>
+                                <option value="2">Second</option>
+                                <option value="3">third</option>
+                            </select>
+
+                        </fieldset>
+                    </form>
+                </div>
                 <b>Nature:</b> Modest (+Special Attack / - Attack)
                 <br />
                 <div class="flexBox">
-                    <div class="statBlock">
+                    <div class="statBlock block">
                         <table>
                             <tr>
                                 <th>Hit Points: 51 </th>
@@ -146,7 +167,7 @@
                             </tr>
                         </table>
                     </div>
-                    <div class="rightBox">
+                    <div class="rightBox block">
                         <table class="evade">
                             <tr>
                                 <th>Psys Evade:</th>
@@ -160,7 +181,7 @@
                                 <th>Speed Evade:</th>
                                 <td>0</td>
                             </tr>
-                            </table>
+                        </table>
                         <table>
                             <tr>
                                 <th>Injuries:</th>
@@ -169,11 +190,11 @@
                         </table>
                     </div>
                 </div>
-                
+
                 <b>Nature:</b> Modest (+Special Attack / - Attack)
                 <br />
                 <div class="flexBox">
-                    <div class="statBlock">
+                    <div class="statBlock block">
                         <table>
                             <tr>
                                 <th>Hit Points: 51 </th>
@@ -201,7 +222,7 @@
                             </tr>
                         </table>
                     </div>
-                    <div class="rightBox">
+                    <div class="rightBox block">
                         <table class="evade">
                             <tr>
                                 <th>Psys Evade:</th>
@@ -215,7 +236,7 @@
                                 <th>Speed Evade:</th>
                                 <td>0</td>
                             </tr>
-</table>
+                        </table>
                         <table>
                             <tr>
                                 <th>Injuries:</th>
@@ -227,7 +248,7 @@
                 <b>Nature:</b> Modest (+Special Attack / - Attack)
                 <br />
                 <div class="flexBox">
-                    <div class="statBlock">
+                    <div class="statBlock block">
                         <table>
                             <tr>
                                 <th>Hit Points: 51 </th>
@@ -255,7 +276,7 @@
                             </tr>
                         </table>
                     </div>
-                    <div class="rightBox">
+                    <div class="rightBox block">
                         <table class="evade">
                             <tr>
                                 <th>Psys Evade:</th>
@@ -282,7 +303,7 @@
             </div>
         </div>
         <div class="box">
-            <table class="edgeTutor">
+            <table class="edgeTutor block">
                 <tr>
                     <td>PokeEdge / Tutor Item</td>
                     <td>Cost</td>
@@ -536,7 +557,7 @@
             <br />
         </div>
     </div>
-    
+
 
     <script src="jquery-3.7.1.js"></script>
     <script src="jquery-ui.min.js"></script>

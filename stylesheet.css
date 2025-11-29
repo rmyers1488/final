@@ -4,92 +4,17 @@
 .flexBox {
     display: flex;
 }
-/*scrolling slideshow*/
-
-/*end scrolling slideshow*/
-
-/*.leftImages{
-    list-style:none;
-}
-.rightImage {
-    margin-left: 1em;
-    height: 100px;
-}
-.rightImage img {
-    height: 500px;
-}*/
 .rightBox {
     margin-left: .5em;
 }
-/*.image{
-    width: 50px;
-}*/
 /*images slideshow*/
-/*#images img {
+#images img {
     display: none;
     height: 500px;
 }
 #images .show {
     display: inline;
-}*/
-/*images scroll*/
-.imgContainer {
-    overflow: hidden;
-    height: 500px;
-    width: 800px;
-    margin-bottom: 15px;
 }
-.imageBlock {
-    overflow: hidden;
-/*    width: 1500px;*/
-    height: 500px;
-    width: 1200px;
-}
-.imageBlock img{
-    float:left;
-}
-/*#images {
-    height: 500px;
-    width: 500px;
-    overflow: hidden;
-    position: relative;
-}*/
-/*#images img {
-    float: left;
-    width: auto;
-    height: 500px;
-}*/
-/*slideshow widget*/
-/*.imageBlock {
-    border: 1px solid #bebebe;
-    height: 400px;
-    overflow: hidden;
-    position: relative;
-    width: 400px;
-    z-index: 10;
-}
-.imageBlock ul {
-    left: 0;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    width: 2500px;
-}
-.imageBlock li {
-    float: left;
-}
-.imageBlock .trigger {
-    left: 0;
-    position: absolute;
-    top: 0; 
-    z-index: 5;
-    text-indent: -9999px;
-    height: 400px;
-    width: 400px;
-    display: block;
-}*/
 
 /*images*/
 .moveData {
@@ -100,6 +25,8 @@
     margin-left: auto;
     margin-right: auto;
     opacity: 0;
+    z-index: 10;
+/*    display: none;*/
 }
 .moveList {
     text-decoration: underline;
@@ -219,7 +146,7 @@
 .natureStats {
     height: 175px;
     width: 350px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 /*natureStat block over*/
 
@@ -247,7 +174,7 @@
     -moz-border-radius: 5px; --webkit-border-radius: 5px;
 }
 .close {
-    background: url('close-button-icon-free-vector.jpg') 0 0 no-repeat;
+    background: transparent url('close-button-icon-free-vector.jpg') 0 0 no-repeat;
     text-indent: -9999px;
     position: absolute;
     top: 2px;
@@ -260,10 +187,25 @@
     padding-left: 5px;
 }
 
-/*1 up container for damage*/
+/*1 up container*/
 .adding {
     position: relative;
     left: -35px;
     top: -4px;
     display: none;
+}
+.oneUp {
+    font-size: 3em;
+}
+
+/*ui dialog*/
+#gymBages {
+    background: hsl(351, 87%, 40%);
+    border-radius: 15px;
+}
+.insideGym {
+    padding: 10px;
+}
+.badge {
+    font-weight:bolder;
 }
