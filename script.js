@@ -8,16 +8,21 @@ $(document).ready(function () {
     //tooltip
     $('.blurp').hover(function (event) {
         console.log('tooltip');
-        let titleText = $(this).attr('title');
+        const titleText = $(this).attr('title');
         $(this)
             .data('tipText', titleText)
             .removeAttr('title');
         $('<p class="tooltip"></p>')
             .text(titleText)
             .css({
+                'position': 'absolute',
                 'top': (event.pageY - 10) + 'px',
-                'left': (event.pageX - 10) + 'px'
+                'left': (event.pageX - 10) + 'px',
+                'z- index': 9999,
+                'pointerEvent': 'none',
+                'display': 'none'
             })
+            .appendTo('body')
             .fadeIn('slow');
     }, function () {
         $(this).attr('title', $(this).data('tipText'));
@@ -60,9 +65,6 @@ $(document).ready(function () {
     $('.robertCharList').hide();
     $('.robertMon').hide();
 
-   
-    
-
     //growl tags 7.20
     setTimeout(function () {
         addNotice('<p>Player Information</p>');
@@ -76,136 +78,62 @@ $(document).ready(function () {
     setTimeout(function () {
         addNotice('<p>Level 7, Chef, Researcher-Apothecary</p>');
     }, 7000);
-    //grwol start7.20
-    //$('#growl')
-    //    .find('.close')
-    //    .on('click', function () {
-    //        //console.log('growl');
-    //        $(this)
-    //            .closest('.notice')
-    //            .animate({
-    //                border: 'none',
-    //                height: 0,
-    //                marginBottom: 0,
-    //                marginTop: '-8px',
-    //                opacity: 0,
-    //                paddingBottom: 0,
-    //                paddingTop: 0,
-    //                queue: false
-    //            }, 5000, function () {
-    //                $(this).remove();
-    //            });
-    //    });
 
-//tooltip
-    //$('.blurp').hover(function (event) {
-    //    console.log('tooltip');
-    //    let titleText = $(this).attr('title');
-    //    $(this)
-    //        .data('tipText', titleText)
-    //        .removeAttr('title');
-    //    $('<p class="tooltip"></p>')
-    //        .text(titleText)
-    //        .css({
-    //            'top': (event.pageY - 10) + 'px',
-    //            'left': (event.pageX - 10) + 'px'
-    //        })
-    //        .fadeIn('slow');
-    //}, function () {
-    //    $(this).attr('title', $(this).data('tipText'));
-    //    $('.tooltip').remove();
-    //}).mousemove(function (event) {
-    //    $('.tooltip')
-    //        .css({
-    //            'top': (event.pageY - 10) + 'px',
-    //            'left': (event.pageX - 10) + 'px'
-    //        });
+    $('#growl')
+        //.find('.close')
+        .on('click', '.close', function () {
+            e.preventDefault();
+            //console.log('growl');
+            $(this)
+                .closest('.notice')
+                .animate({
+                    border: 'none',
+                    height: 0,
+                    marginBottom: 0,
+                    marginTop: '-8px',
+                    opacity: 0,
+                    paddingBottom: 0,
+                    paddingTop: 0,
+                    queue: false
+                }, 500, function () {
+                    $(this).remove();
+                });
+        });
+    //menu hide
+
+    //menu open/close hover
+    $('.robertChar').on('click', function () {
+        console.log('rob char');
+        //    $('.robertMenu').filter(':not(:first-child').toggle();
+        $('.robertCharList').toggle();
+        //}, function () {
+        //    //    $('.robertMenu').filter(':not(:first-child').toggle();
+        //    $('.robertCharList').toggle();
+    });
+    $('.robertTeamList').on('click', function () {
+        $('.robertMon').toggle();
+        //        $('.robertTeam').filter(':not(:first-child').toggle();
+        //}, function () {
+        //    $('.robertMon').toggle();
+        ////        $('.robertTeam').filter(':not(:first-child').toggle();
+    });
+
+    //menu stay in place
+    //$(window).scroll(function () {
+    //    $('.menu').css('top', $(document).scrollTop());
     //});
 
-    //slider 7.14
-    showNature();
-    let container = $('.statRange');
-    let stats = $('#stats').val();
-    let rangeSlider = $('<div></div>')
-        .slider({
-            min: 1,
-            max: 3,
-            step: 1,
-            values: [stats],
-            range: true,
-            animate: true,
-            slide: function (e, ui) {
-                $(this)
-                    .parent()
-                    .find('#min')
-                    .val(ui.values[0]);
-                showNature();
-            }
-        })
-        .before('<h3>Select Nature</h3>');
-    $('.natureStats').after(rangeSlider).hide();
+    //growl's addNotice 7.20
+    function addNotice(notice) {
+        $('<div class="notice"></div>')
+            .append('<div class="skin"></div>')
+            .append('<a href="#" class="close">close</a>')
+            .append($('<div class="content"></div>').html(notice))
+            .hide()
+            .appendTo('#growl')
+            .fadeIn(1000);
+    }
 });
-//sliders 7.14
-let stats = $('#stats').val();
-$('.data tr').each(function () {
-    let nature = parseInt($(this).find('td:last').text().substring(1));
-    
-})
-
-$('#growl')
-    //.find('.close')
-    .on('click', '.close', function () {
-        //console.log('growl');
-        $(this)
-            .closest('.notice')
-            .animate({
-                border: 'none',
-                height: 0,
-                marginBottom: 0,
-                marginTop: '-8px',
-                opacity: 0,
-                paddingBottom: 0,
-                paddingTop: 0,
-                queue: false
-            }, 5000, function () {
-                $(this).remove();
-            });
-    });
-//menu hide
-
-//menu open/close hover
-$('.robertChar').on('click', function () {
-    console.log('rob char');
-    //    $('.robertMenu').filter(':not(:first-child').toggle();
-    $('.robertCharList').toggle();
-//}, function () {
-//    //    $('.robertMenu').filter(':not(:first-child').toggle();
-//    $('.robertCharList').toggle();
-});
-$('.robertTeamList').on('click', function () {
-    $('.robertMon').toggle();
-//        $('.robertTeam').filter(':not(:first-child').toggle();
-//}, function () {
-//    $('.robertMon').toggle();
-////        $('.robertTeam').filter(':not(:first-child').toggle();
-});
-
-//menu stay in place
-//$(window).scroll(function () {
-//    $('.menu').css('top', $(document).scrollTop());
-//});
-
-//growl's addNotice 7.20
-function addNotice(notice) {
-    $('<div class="notice"></div>')
-        .append('<div class="skin"></div>')
-        .append('<a href="#" class="close">close</a>')
-        .append($('<div class="content"></div>').html(notice))
-        .hide()
-        .appendTo('#growl')
-        .fadeIn(1000);
-}
-
 //$(function () {
 //    //grwol start
     
@@ -246,13 +174,6 @@ $('.move1').hover(function (event) {
 }, function () {
     $('.moveBox1').animate({opacity: '0'},500);
 });
-//$('.move1').hover(function (event) {
-//    $('.moveBox1').fadeIn(1000);
-//    //$('.moveBox1').animate({ opacity: '1' }, 1000);
-//}, function () {
-//    $('.moveBox1').fadeOut(500);
-//    //$('.moveBox1').animate({opacity: '0'},500);
-//});
 $('.move2').hover(function (event) {
     $('.moveBox2').animate({ opacity: '1' }, 1000);
 }, function () {
@@ -302,7 +223,6 @@ $('.rightBox').hover(function () {
 $('.edgeTutor').hover(function () {
     $(this).effect('highlight', {}, 1000);
 });
-+
 
 
 

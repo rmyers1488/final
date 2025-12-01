@@ -142,14 +142,6 @@
             }*/
 /*menu over*/
 
-/*natureStat block*/
-.natureStats {
-    height: 175px;
-    width: 350px;
-    overflow-y: scroll;
-}
-/*natureStat block over*/
-
 /*growl*/
 #growl {
     position: absolute;
@@ -208,4 +200,15 @@
 }
 .badge {
     font-weight:bolder;
+}
+
+/*tooltip*/
+.tooltip {
+    position:absolute;
+    display:none;
+    pointer-events: none;
+    z-index: 9999;
+    padding: 6px 8px;
+    background: #ffed8a;
+    border-radius: 4px;
 }
