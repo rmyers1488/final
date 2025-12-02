@@ -18,8 +18,8 @@ $(document).ready(function () {
                 'position': 'absolute',
                 'top': (event.pageY - 10) + 'px',
                 'left': (event.pageX - 10) + 'px',
-                'z- index': 9999,
-                'pointerEvent': 'none',
+                'z-index': 9999,
+                'pointer-event': 'none',
                 'display': 'none'
             })
             .appendTo('body')
@@ -36,28 +36,9 @@ $(document).ready(function () {
     });
 
 
-    //1up damage display7.21
-    $('<span class="oneUp">Kansas City: Mega City!</span>')
-        .addClass('adding')
-        .insertAfter('.campaign');
-    $('.campaign')
-        .click(function (e) {
-            doOneUp(this, function () {
-                $(this).prev().text('Added');
-            });
-            e.preventDefault();
-        });
+    
 
-    //gym bage ui dialog7.19
-    $('.campaign').click(function () {
-        $('#gymBages').dialog('open');
-    });
-    $('#gymBages').dialog({
-        autoOpen: false,
-        height: 150,
-        modal: true,
-        resizable: false
-    });
+    
 
     //hide menu
     //$('.robertMenu').filter(':not(:first-child)').hide();
@@ -65,8 +46,13 @@ $(document).ready(function () {
     $('.robertCharList').hide();
     $('.robertMon').hide();
 
-    //growl tags 7.20
+    
+
+    
+});
+//growl tags 7.20
     setTimeout(function () {
+        console.log('growl 1');
         addNotice('<p>Player Information</p>');
     }, 1000);
     setTimeout(function () {
@@ -78,8 +64,7 @@ $(document).ready(function () {
     setTimeout(function () {
         addNotice('<p>Level 7, Chef, Researcher-Apothecary</p>');
     }, 7000);
-
-    $('#growl')
+$('#growl')
         //.find('.close')
         .on('click', '.close', function () {
             e.preventDefault();
@@ -99,9 +84,40 @@ $(document).ready(function () {
                     $(this).remove();
                 });
         });
-    //menu hide
+    //growl's addNotice 7.20
+    function addNotice(notice) {
+        $('<div class="notice"></div>')
+            .append('<div class="skin"></div>')
+            .append('<a href="#" class="close">close</a>')
+            .append($('<div class="content"></div>').html(notice))
+            .hide()
+            .appendTo('#growl')
+            .fadeIn(1000);
+    }
+//gym bage ui dialog7.19
+$('.campaign').on('click', function () {
+    console.log('campaign');
+        $('#gymBages').dialog('open');
+    });
+    $('#gymBages').dialog({
+        autoOpen: false,
+        height: 150,
+        modal: true,
+        resizable: false
+    });
+//1up damage display7.21
+    $('<span class="oneUp">Kansas City: Mega City!</span>')
+        .addClass('adding')
+        .insertAfter('.campaign');
+    $('.campaign')
+        .click(function (e) {
+            doOneUp(this, function () {
+                $(this).prev().text('Added');
+            });
+            e.preventDefault();
+        });
 
-    //menu open/close hover
+      //menu open/close hover
     $('.robertChar').on('click', function () {
         console.log('rob char');
         //    $('.robertMenu').filter(':not(:first-child').toggle();
@@ -118,27 +134,6 @@ $(document).ready(function () {
         ////        $('.robertTeam').filter(':not(:first-child').toggle();
     });
 
-    //menu stay in place
-    //$(window).scroll(function () {
-    //    $('.menu').css('top', $(document).scrollTop());
-    //});
-
-    //growl's addNotice 7.20
-    function addNotice(notice) {
-        $('<div class="notice"></div>')
-            .append('<div class="skin"></div>')
-            .append('<a href="#" class="close">close</a>')
-            .append($('<div class="content"></div>').html(notice))
-            .hide()
-            .appendTo('#growl')
-            .fadeIn(1000);
-    }
-});
-//$(function () {
-//    //grwol start
-    
-    
-//});
 //image slideshow
 function slideShow() {
     let current = $('#images .show');
