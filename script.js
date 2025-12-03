@@ -19,7 +19,7 @@ $(document).ready(function () {
                 'top': (event.pageY - 10) + 'px',
                 'left': (event.pageX - 10) + 'px',
                 'z-index': 9999,
-                'pointer-event': 'none',
+                'pointerEvents': 'none',
                 'display': 'none'
             })
             .appendTo('body')
@@ -34,41 +34,14 @@ $(document).ready(function () {
                 'left': (event.pageX - 10) + 'px'
             });
     });
-
-
-    
-
-    
-
-    //hide menu
-    //$('.robertMenu').filter(':not(:first-child)').hide();
-    //$('.robertTeam').filter(':not(:first-child)').hide();
-    $('.robertCharList').hide();
-    $('.robertMon').hide();
-
-    
-
-    
-});
-//growl tags 7.20
-    setTimeout(function () {
-        console.log('growl 1');
-        addNotice('<p>Player Information</p>');
-    }, 1000);
-    setTimeout(function () {
-        addNotice('<p>Player: Robert</p>');
-    }, 3000);
-    setTimeout(function () {
-        addNotice('<p>Character: Bart</p>');
-    }, 5000);
-    setTimeout(function () {
-        addNotice('<p>Level 7, Chef, Researcher-Apothecary</p>');
-    }, 7000);
-$('#growl')
+    //growl
+    $('#growl')
         //.find('.close')
-        .on('click', '.close', function () {
+        //.on('click', function (e) {
+        .on('click', '.close', function (e) {
+
             e.preventDefault();
-            //console.log('growl');
+            console.log('growl');
             $(this)
                 .closest('.notice')
                 .animate({
@@ -84,6 +57,21 @@ $('#growl')
                     $(this).remove();
                 });
         });
+    //growl tags 7.20
+    setTimeout(function () {
+        console.log('growl 1');
+        addNotice('<p>Player Information</p>');
+    }, 1000);
+    setTimeout(function () {
+        addNotice('<p>Player: Robert</p>');
+    }, 3000);
+    setTimeout(function () {
+        addNotice('<p>Character: Bart</p>');
+    }, 5000);
+    setTimeout(function () {
+        addNotice('<p>Level 7, Chef, Researcher-Apothecary</p>');
+    }, 7000);
+
     //growl's addNotice 7.20
     function addNotice(notice) {
         $('<div class="notice"></div>')
@@ -94,6 +82,20 @@ $('#growl')
             .appendTo('#growl')
             .fadeIn(1000);
     }
+
+    
+
+    //hide menu
+    //$('.robertMenu').filter(':not(:first-child)').hide();
+    //$('.robertTeam').filter(':not(:first-child)').hide();
+    $('.robertCharList').hide();
+    $('.robertMon').hide();
+
+    
+
+    
+});
+
 //gym bage ui dialog7.19
 $('.campaign').on('click', function () {
     console.log('campaign');
