@@ -9,31 +9,31 @@
 <body>
     <div class="menu">
         <div>
-            <div class="robertChar">Robert: Bart</div>
-            
-                <ul class="robertCharList">
-                    <li>
-                        <a href="#">Character Bio</a>
+            <div class="title">Robert: Bart</div>
+
+            <ul>
+                <li class="robertChar">
+                    <a href="#">Character Bio</a>
+                </li>
+                <li class="robertChar">
+                    <a href="#">Character Sheet</a>
+                </li>
+                <!--<li class="bartList list">-->
+                <div class="robertChar robertTeamList">Team</div>
+                <ul>
+                    <li class="robertMon">
+                        <a href="#" class="blurp" title="Bulbasaur">Cash</a>
                     </li>
-                    <li>
-                        <a href="#">Character Sheet</a>
+                    <li class="robertMon">
+                        <a href="#" class="blurp" title="Skiddo">Trevor</a>
                     </li>
-                    <!--<li class="bartList list">-->
-                    <div class="robertCharList robertTeamList">Team</div>
-                    <ul>
-                        <li class="robertMon">
-                            <a href="#" class="blurp" title="Bulbasaur">Cash</a>
-                        </li>
-                        <li class="robertMon">
-                            <a href="#" class="blurp" title="Skiddo">Trevor</a>
-                        </li>
-                        <li class="robertMon">
-                            <a href="#" class="blurp" title="Ralts">Mob</a>
-                        </li>
-                    </ul>
+                    <li class="robertMon">
+                        <a href="#" class="blurp" title="Ralts">Mob</a>
+                    </li>
                 </ul>
-                <!--</li>-->
-            
+            </ul>
+            <!--</li>-->
+
         </div>
         <ul class="Mark: Gallant"></ul>
         <ul class="Drew: Mary"></ul>
@@ -42,17 +42,19 @@
 
     <h2>This game relies on the Pokemon TableTop United version 1.05</h2>
     <a class="campaign" href="#">Campaign</a>
-<!--dialog-->
-    <div id="gymBages">
+    <!--dialog-->
+    <div id="gymBages" title="badge numbers">
         <div class="insideGym" title="bage numbers">
             <span class="badge">Badges</span>
             <p>
-                Trainer Bart has earned 1 Gym Badge!
+                Trainer Bart has earned 1 Gym Badge!<br />
+                He has earned the Star Badge!
                 <br />
                 He has 7 more to go!
             </p>
         </div>
     </div>
+    <a href="#" id="campaign">Campaign</a>
     <h1 class="blurp" title="Bulbasaur can be seen napping in bright
         sunlight. There is a seed on its back. By soaking up the sun's
         rays, the seed grows progressively larger. ">
@@ -122,211 +124,130 @@
             <br />
             <b>Skills:</b> Athl 3d6+2, Acro 2d6, Combat 2d6, Stealth 2d6, Percep 2d6, Focus 2d6+1
             <br />
-               
-                <b>Nature:</b> Modest (+Special Attack / - Attack)
-                <br />
-                <div class="flexBox">
-                    <div class="statBlock block">
-                        <table>
-                            <tr>
-                                <th>Hit Points: 51 </th>
-                                <td></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <th>HP:</th>
-                                <td>9</td>
-                                <th>SpAtk:</th>
-                                <td>16</td>
-                            </tr>
-                            <tr>
-                                <th>Atk:</th>
-                                <td>4</td>
-                                <th>SpDef:</th>
-                                <td>11</td>
-                            </tr>
-                            <tr>
-                                <th>Def:</th>
-                                <td>8</td>
-                                <th>Speed:</th>
-                                <td>7</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="rightBox block">
-                        <table class="evade">
-                            <tr>
-                                <th>Psys Evade:</th>
-                                <td> 0</td>
-                            </tr>
-                            <tr>
-                                <th>Spec Evade:</th>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th>Speed Evade:</th>
-                                <td>0</td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <th>Injuries:</th>
-                                <td>0</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
 
-                <b>Nature:</b> Modest (+Special Attack / - Attack)
-                <br />
-                <div class="flexBox">
-                    <div class="statBlock block">
-                        <table>
-                            <tr>
-                                <th>Hit Points: 51 </th>
-                                <td></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <th>HP:</th>
-                                <td>9</td>
-                                <th>SpAtk:</th>
-                                <td>16</td>
-                            </tr>
-                            <tr>
-                                <th>Atk:</th>
-                                <td>4</td>
-                                <th>SpDef:</th>
-                                <td>11</td>
-                            </tr>
-                            <tr>
-                                <th>Def:</th>
-                                <td>8</td>
-                                <th>Speed:</th>
-                                <td>7</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="rightBox block">
-                        <table class="evade">
-                            <tr>
-                                <th>Psys Evade:</th>
-                                <td> 0</td>
-                            </tr>
-                            <tr>
-                                <th>Spec Evade:</th>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th>Speed Evade:</th>
-                                <td>0</td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <th>Injuries:</th>
-                                <td>0</td>
-                            </tr>
-                        </table>
-                    </div>
+            <b>Nature:</b> Modest (+Special Attack / - Attack)
+            <br />
+            <div class="flexBox">
+                <div class="statBlock block">
+                    <table>
+                        <tr>
+                            <th>Hit Points: 51 </th>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>HP:</th>
+                            <td>9</td>
+                            <th>SpAtk:</th>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <th>Atk:</th>
+                            <td>4</td>
+                            <th>SpDef:</th>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <th>Def:</th>
+                            <td>8</td>
+                            <th>Speed:</th>
+                            <td>7</td>
+                        </tr>
+                    </table>
                 </div>
-                <b>Nature:</b> Modest (+Special Attack / - Attack)
-                <br />
-                <div class="flexBox">
-                    <div class="statBlock block">
-                        <table>
-                            <tr>
-                                <th>Hit Points: 51 </th>
-                                <td></td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <th>HP:</th>
-                                <td>9</td>
-                                <th>SpAtk:</th>
-                                <td>16</td>
-                            </tr>
-                            <tr>
-                                <th>Atk:</th>
-                                <td>4</td>
-                                <th>SpDef:</th>
-                                <td>11</td>
-                            </tr>
-                            <tr>
-                                <th>Def:</th>
-                                <td>8</td>
-                                <th>Speed:</th>
-                                <td>7</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="rightBox block">
-                        <table class="evade">
-                            <tr>
-                                <th>Psys Evade:</th>
-                                <td> 0</td>
-                            </tr>
-                            <tr>
-                                <th>Spec Evade:</th>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <th>Speed Evade:</th>
-                                <td>0</td>
-                            </tr>
-                        </table>
-                        <table>
-                            <tr>
-                                <th>Injuries:</th>
-                                <td>0</td>
-                            </tr>
-                        </table>
-                    </div>
+                <div class="rightBox block">
+                    <table class="evade">
+                        <tr>
+                            <th>Psys Evade:</th>
+                            <td> 0</td>
+                        </tr>
+                        <tr>
+                            <th>Spec Evade:</th>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Speed Evade:</th>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>Injuries:</th>
+                            <td>0</td>
+                        </tr>
+                    </table>
                 </div>
+            </div>
+            <b>Alternative Stats</b>
+            <b>Nature:</b> Modest (+Special Attack / - Attack)
+            <br />
+            <div class="flexBox">
+                <div class="statBlock block altStats">
+                    <table>
+                        <tr>
+                            <th>Hit Points: 51 </th>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th>HP:</th>
+                            <td>9</td>
+                            <th>SpAtk:</th>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <th>Atk:</th>
+                            <td>4</td>
+                            <th>SpDef:</th>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <th>Def:</th>
+                            <td>8</td>
+                            <th>Speed:</th>
+                            <td>7</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="rightBox block">
+                    <table class="evade">
+                        <tr>
+                            <th>Psys Evade:</th>
+                            <td> 0</td>
+                        </tr>
+                        <tr>
+                            <th>Spec Evade:</th>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Speed Evade:</th>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th>Injuries:</th>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
 
         </div>
         <div class="box">
-            <table class="edgeTutor block">
-                <tr>
-                    <td>PokeEdge / Tutor Item</td>
-                    <td>Cost</td>
-                </tr>
-                <tr>
-                    <td>Underdog's Strength</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
+            PokeEdge / Tutor Item
+            <div class="edgeTutor block">
+                <ul>
+                    <li><a href="underdogStrength.html">Underdog's Strength</a></li>
+                </ul>
+                <div class="description">
+                    Select the Pokemon Edge to learn more.
+                </div>
+            </div>
             <b>Inheritance Moves:</b>
             <span class="underline"></span>
             <br />
@@ -544,13 +465,18 @@
         </div>
     </div>
 
+    <div id="footer">
+        <p>
+            &copy; Copyright 2026 - Rober Myers - rmyers14@stumail.jccc.edu
+        </p>
+    </div>
 
     <script src="jquery-3.7.1.js"></script>
     <script src="jquery-ui.min.js"></script>
     <script src="jquery.colorbox-min.js"></script>
     <!--<script src="jquery.hoverIntent.min.js"></script>-->
     <!--<script src="hoverIntent.js"></script>-->
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
     <!--<script src="tooltip.js"></script>-->
 </body>
 </html>

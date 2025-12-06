@@ -1,13 +1,14 @@
 ﻿body
 {
+    background-color: hsl(20, 1%, 26%);
+    color: hsl(240, 2%, 91%);
 }
 .flexBox {
     display: flex;
 }
 .rightBox {
     margin-left: .5em;
-}
-/*images slideshow*/
+}/*images slideshow*/
 #images img {
     display: none;
     height: 500px;
@@ -26,6 +27,7 @@
     margin-right: auto;
     opacity: 0;
     z-index: 10;
+
 /*    display: none;*/
 }
 .moveList {
@@ -38,9 +40,9 @@
     position: fixed;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-/*    border-radius: 20px;*/
-    border: 5px solid black;
-    background-color: white;
+    /*    border-radius: 20px;*/
+    border: 5px solid hsl(351, 87%, 40%);
+    background-color: hsl(20, 1%, 26%);
     padding-right: 1em;
     padding-left: 1em;
     padding-bottom: 1em;
@@ -57,15 +59,15 @@
 .statBlock {
 /*    border: 1px black solid;*/
 }
-.statBlock table {
-    border: 1px black solid;
-    width: 150px;
-}
+    .statBlock table {
+        border: 3px hsl(351, 87%, 40%) solid;
+        width: 150px;
+    }
 .statBlock table .th {
     text-align: right;
 }
-.rightBox table{
-    border: 1px black solid;
+.rightBox table {
+    border: 3px hsl(351, 87%, 40%) solid;
     width: 150px;
 }
 .rightBox table .th {
@@ -179,6 +181,11 @@
     padding-left: 5px;
 }
 
+.campaign {
+    color: hsl(240, 2%, 91%);
+    
+}
+
 /*1 up container*/
 .adding {
     position: relative;
@@ -194,6 +201,11 @@
 #gymBages {
     background: hsl(351, 87%, 40%);
     border-radius: 15px;
+    display: none;
+
+}
+.gymBagesOff {
+    float: right;
 }
 .insideGym {
     padding: 10px;
@@ -211,4 +223,15 @@
     padding: 6px 8px;
     background: #ffed8a;
     border-radius: 4px;
+}
+
+/*edgeTuto, load function*/
+.edgeTutor ul {
+    list-style: none;
+    margin-left: -2.5em;
+    margin-top: -.4em;
+}
+.edgeTutor ul a {
+    color: hsl(115, 24%, 64%)
+
 }
