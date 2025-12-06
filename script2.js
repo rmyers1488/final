@@ -87,6 +87,12 @@ $(document).ready(function () {
         resizable: false
     });
 
+    //$('.edgeTutor ul li a').on('load', function (e) {
+    //    let url = $(this).attr('href') + '#setting';
+    //    $('.description').html('loading...').load(url);
+    //    e.preventDefault();
+    //});
+
 });
 
 ////grow's addNotice function
