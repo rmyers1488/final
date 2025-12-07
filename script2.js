@@ -77,16 +77,12 @@ $(document).ready(function () {
             });
     });
 
-    $('.campaign').click(function () {
-        $('#gymBages').dialog('open');
-    });
-    $('#gymBages').dialog({
-        autoOpen: false,
-        height: 150px,
-        modal: true,
-        resizable: false
-    });
+    $('.uStrengthInfo')
+        .hide()
+        .css({ 'font-size': 3 + 'px' });
 
+    $('robertChar').hide();
+    $('robertMon').hide();
     //$('.edgeTutor ul li a').on('load', function (e) {
     //    let url = $(this).attr('href') + '#setting';
     //    $('.description').html('loading...').load(url);
@@ -175,3 +171,22 @@ $('.block').hover(function () {
     $(this).effect('highlight', {}, 1000);
 });
 
+//edge Tutor block
+$('.uStrength').click(function () {
+    if ($('uStrengthInfo').is(':visible')) {
+        $('uStrengthInfo')
+            .animate({ 'font-size': 3 + 'px' }, 1000)
+            .hide();
+    } else {
+        $('uStrengthInfo')
+            .show()
+            .animate({ 'font-size': 16 + 'px' }, 1000);
+    }
+});
+
+$('.title').click(function () {
+    $('robertChar').toggle();
+});
+$('.robertTeamList').click(function () {
+    $('.robertMon').toggle();
+});

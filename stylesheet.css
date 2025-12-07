@@ -225,13 +225,12 @@
     border-radius: 4px;
 }
 
-/*edgeTuto, load function*/
+/*edgeTuton*/
 .edgeTutor ul {
     list-style: none;
     margin-left: -2.5em;
     margin-top: -.4em;
 }
-.edgeTutor ul a {
-    color: hsl(115, 24%, 64%)
-
+.uStrengthInfo {
+    right: 5px;
 }
