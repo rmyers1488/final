@@ -81,8 +81,8 @@ $(document).ready(function () {
         .hide()
         .css({ 'font-size': 3 + 'px' });
 
-    $(.'robertChar').hide();
-    $(.'robertMon').hide();
+    $('.robertChar').hide();
+    $('.robertMon').hide();
     //$('.edgeTutor ul li a').on('load', function (e) {
     //    let url = $(this).attr('href') + '#setting';
     //    $('.description').html('loading...').load(url);
