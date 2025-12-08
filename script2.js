@@ -81,8 +81,8 @@ $(document).ready(function () {
         .hide()
         .css({ 'font-size': 3 + 'px' });
 
-    $('robertChar').hide();
-    $('robertMon').hide();
+    $(.'robertChar').hide();
+    $(.'robertMon').hide();
     //$('.edgeTutor ul li a').on('load', function (e) {
     //    let url = $(this).attr('href') + '#setting';
     //    $('.description').html('loading...').load(url);
@@ -173,19 +173,19 @@ $('.block').hover(function () {
 
 //edge Tutor block
 $('.uStrength').click(function () {
-    if ($('uStrengthInfo').is(':visible')) {
-        $('uStrengthInfo')
+    if ($('.uStrengthInfo').is(':visible')) {
+        $('.uStrengthInfo')
             .animate({ 'font-size': 3 + 'px' }, 1000)
             .hide();
     } else {
-        $('uStrengthInfo')
+        $('.uStrengthInfo')
             .show()
             .animate({ 'font-size': 16 + 'px' }, 1000);
     }
 });
 
 $('.title').click(function () {
-    $('robertChar').toggle();
+    $('.robertChar').toggle();
 });
 $('.robertTeamList').click(function () {
     $('.robertMon').toggle();
